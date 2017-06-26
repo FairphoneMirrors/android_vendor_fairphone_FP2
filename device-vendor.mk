@@ -18,3 +18,16 @@
 # (FP2) products.
 #
 # Everything in this directory will become public.
+
+# Push Fairphone ringtones
+PRODUCT_COPY_FILES += \
+    vendor/fairphone/FP2/assets/ringtones/Sunbeam.mp3:system/media/audio/ringtones/Fairphone.mp3 \
+    vendor/fairphone/FP2/assets/ringtones/Fiesta.mp3:system/media/audio/ringtones/Fiesta.mp3
+
+# Set default ringtone to Fairphone's
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=Fairphone.mp3
+
+# Add boot animation
+PRODUCT_COPY_FILES += \
+    vendor/fairphone/FP2/assets/bootanimation.zip:system/media/bootanimation.zip
